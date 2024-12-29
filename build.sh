@@ -6,7 +6,7 @@ should_run=${1:-no}
 
 RAYLIB_PATH="raylib"
 
-if [! -d "RAYLIB_PATH/.git" ]; then
+if [ ! -d "RAYLIB_PATH/.git" ]; then
     git submodule update --init --recursive
 fi
 

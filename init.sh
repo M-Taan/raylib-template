@@ -14,8 +14,10 @@ cd ../
 
 mv "$current_name" "$new_name"
 
-cd -
+cd "$new_name"
 
 git init
 
 git branch -M main
+
+echo "Init is done please make sure that your teminal/editor are refreshed to reflect the change"
