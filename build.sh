@@ -6,6 +6,10 @@ should_run=${1:-no}
 
 RAYLIB_PATH="raylib"
 
+if [! -d "RAYLIB_PATH/.git" ]; then
+    git submodule update --init --recursive
+fi
+
 if [ ! -f "$RAYLIB_PATH/src/libraylib.a" ]; then
     sudo pacman -S --needed alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama base-devel git libxkbcommon
     cd "$RAYLIB_PATH/src"
